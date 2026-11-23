@@ -3,6 +3,21 @@
 Writes the entry deterministically to /output/entry.txt.
 The line is a single-line safety warning label, 154 characters,
 with the laugh landing in the last few words.
+
+Craft notes — why this one-liner works:
+- Label form: the "WARNING: Contents may ..." plus "Keep away from ..."
+  structure borrows the dry, authoritative voice of a product safety
+  label, so applying it to a human reads as instantly wrong and funny.
+- Recognition: the first half lists three behaviours everyone catches
+  themselves doing — overthinking, oversharing, and replying "haha" to
+  nothing funny — so the reader sees themselves (or a friend) before the
+  punchline arrives.
+- The turn: the "keep away from" list starts mundane (Wi-Fi outages,
+  Mondays) and escalates to a social dread — "anyone saying 'we need to
+  talk'" — so the laugh lands in the last few words, on the most dreaded
+  sentence in English.
+- Gate: the entry must be 1-160 characters, a single line, and non-empty
+  after stripping; main() asserts all three before writing.
 """
 
 import os
