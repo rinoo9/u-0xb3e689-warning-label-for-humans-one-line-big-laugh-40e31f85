@@ -1,21 +1,20 @@
 """Warning label for humans: one line, big laugh.
 
 Writes the entry deterministically to /output/entry.txt.
-The line is a single-line safety warning label, 154 characters,
+The line is a single-line safety warning label, 124 characters,
 with the laugh landing in the last few words.
 
 Craft notes — why this one-liner works:
-- Label form: the "WARNING: Contents may ..." plus "Keep away from ..."
-  structure borrows the dry, authoritative voice of a product safety
-  label, so applying it to a human reads as instantly wrong and funny.
-- Recognition: the first half lists three behaviours everyone catches
-  themselves doing — overthinking, oversharing, and replying "haha" to
-  nothing funny — so the reader sees themselves (or a friend) before the
-  punchline arrives.
-- The turn: the "keep away from" list starts mundane (Wi-Fi outages,
-  Mondays) and escalates to a social dread — "anyone saying 'we need to
-  talk'" — so the laugh lands in the last few words, on the most dreaded
-  sentence in English.
+- Label form: the "WARNING: Contents may ..." structure borrows the dry,
+  authoritative voice of a product safety label, so applying it to a human
+  reads as instantly wrong and funny.
+- Recognition: the first half lists three behaviours everyone recognises —
+  taking offence at nothing, remembering it forever, and dragging it into
+  every later argument — so the reader sees themselves (or a friend) before
+  the punchline arrives.
+- The turn: the line escalates from a harmless slight to a life sentence —
+  "for the next ten years" — so the laugh lands in the last few words, on
+  the absurdly long grudge.
 - Gate: the entry must be 1-160 characters, a single line, and non-empty
   after stripping; main() asserts all three before writing.
 """
@@ -23,16 +22,15 @@ Craft notes — why this one-liner works:
 import os
 
 ENTRY = (
-    "WARNING: Contents may overthink, overshare, and reply 'haha' to nothing "
-    "funny. Keep away from Wi-Fi outages, Mondays, and anyone saying "
-    "'we need to talk'."
+    "WARNING: Contents may take offense at nothing, remember it forever, "
+    "and mention it in every argument for the next ten years."
 )
 
 # Why this line: the first half lists three instantly recognisable human
-# behaviours (overthinking, oversharing, fake-laughing at nothing), the
-# second half escalates a standard "keep away from" label list, and the
-# laugh lands in the last few words on the most dreaded sentence in
-# English — "we need to talk". One idea, one line, label wording throughout.
+# behaviours (taking offence at nothing, never forgetting it, dragging it
+# into every later argument), and the laugh lands in the last few words on
+# the absurd escalation — a grudge that lasts "for the next ten years".
+# One idea, one line, label wording throughout.
 
 
 def main() -> None:
